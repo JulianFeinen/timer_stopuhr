@@ -1,0 +1,64 @@
+ html,body{
+    height: 100%;
+}
+
+
+* { /*das sternchen muss man immer machen damit die ganze seite ausgefüllt wird.*/
+    margin:0px;
+    padding: 0px;
+}
+div.allDivs{
+    height: 200px;
+    /* background-color: rgb(212, 223, 233); */
+    top:200px;
+    position: relative;
+    display:grid;
+    row-gap: 10px;
+    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+}
+
+div.ZeitAnzeige{
+    width:470px;
+    background-color: rgb(241, 208, 168);
+    font-size:80px;
+    text-align: center; 
+    border-radius: 30px;
+}
+div.AllButtons{
+    width: 470px;
+    /* background-color: darkorchid; */
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    column-gap: 10px;
+}
+
+div.btnStart{
+    background-color: rgb(30, 210, 105);
+}
+.btnStart:hover{
+    background-color: rgb(27, 161, 83);
+
+}
+
+div.btnStop{
+    background-color: rgb(226, 67, 67);
+}
+.btnStop:hover{
+    background-color: rgb(156, 47, 47);
+
+}
+
+div.btnReset{
+    background-color: rgb(66, 66, 65);
+}
+.btnReset:hover{
+    background-color: rgb(37, 37, 37);
+}
+.button{
+    width:150px;
+    height: 70px;
+    text-align: center;
+    font-size: 50px;
+    border-radius: 30px;
+}
