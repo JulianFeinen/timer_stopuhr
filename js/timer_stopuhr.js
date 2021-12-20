@@ -7,13 +7,6 @@ var Lminuten = 0;
 var stunden = 0;
 var Lstunden = 0;
 
-var sekundent = 0;
-var Lsekundent = 0;
-var minutent = 0;
-var Lminutent = 0;
-var stundent = 0;
-var Lstundent = 0;
-
 var allSekundenT = 00;
 var allMinutenT = 00;
 var allStundenT = 00;
