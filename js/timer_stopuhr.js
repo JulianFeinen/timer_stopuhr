@@ -66,6 +66,13 @@ function updateAnzeige()
         btnReset();
     }
     document.getElementById("ZeitAnzeige").innerHTML = "" + Lstunden + stunden + ":" + Lminuten + minuten + ":" + Lsekunden + sekunden;
+    if(isEven(sekunden))
+    {
+        playsoundTack();
+    }
+    else{
+        playsoundTick();
+    }
 }
 function btnReset()
 {   
@@ -169,6 +176,7 @@ function Timerupdate()
     else
     {
         btnResetTimer();
+        playsoundRinging();
     }
     if(parseInt(allStundenT)<10)
     {
@@ -193,6 +201,13 @@ function Timerupdate()
     else
     {
         document.getElementById("TimerInputR").value = parseInt(allSekundenT);
+    }
+    if(isEven(allSekundenT))
+    {
+        playsoundTack();
+    }
+    else{
+        playsoundTick();
     }
 }
 
@@ -258,4 +273,42 @@ function checkvalue()
     {
         document.getElementById("TimerInputR").value="00";
     }
+}
+
+function isEven(variable)
+{
+    if(variable%2==0)
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+function playsoundTick()
+{   
+    var audioPlayer = document.createElement("audio");
+    audioPlayer.setAttribute("src", "./js/audio/tick.mp3");
+    audioPlayer.volume = 0.2;
+    audioPlayer.play();
+    audioPlayer.remove();
+}
+
+function playsoundTack()
+{
+    
+    var audioPlayer = document.createElement("audio");
+    audioPlayer.setAttribute("src", "./js/audio/tack.mp3");
+    audioPlayer.volume = 0.2;
+    audioPlayer.play();
+    audioPlayer.remove();
+}
+function playsoundRinging()
+{
+    
+    var audioPlayer = document.createElement("audio");
+    audioPlayer.setAttribute("src", "./js/audio/ringing.mp3");
+    audioPlayer.volume = 0.8;
+    audioPlayer.play();
+    audioPlayer.remove();
 }
