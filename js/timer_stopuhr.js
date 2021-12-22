@@ -288,7 +288,7 @@ function isEven(variable)
 function playsoundTick()
 {   
     var audioPlayer = document.createElement("audio");
-    audioPlayer.setAttribute("src", "./js/audio/tick.mp3");
+    audioPlayer.setAttribute("src", "./js/audio/tick.mp3");//no copyrighted sound
     audioPlayer.volume = 0.2;
     audioPlayer.play();
     audioPlayer.remove();
@@ -298,7 +298,7 @@ function playsoundTack()
 {
     
     var audioPlayer = document.createElement("audio");
-    audioPlayer.setAttribute("src", "./js/audio/tack.mp3");
+    audioPlayer.setAttribute("src", "./js/audio/tack.mp3");//no copyrighted sound
     audioPlayer.volume = 0.2;
     audioPlayer.play();
     audioPlayer.remove();
@@ -307,7 +307,7 @@ function playsoundRinging()
 {
     
     var audioPlayer = document.createElement("audio");
-    audioPlayer.setAttribute("src", "./js/audio/ringing.mp3");
+    audioPlayer.setAttribute("src", "./js/audio/ringing.mp3");//no copyrighted sound
     audioPlayer.volume = 0.8;
     audioPlayer.play();
     audioPlayer.remove();
