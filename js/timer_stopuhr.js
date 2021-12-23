@@ -177,31 +177,13 @@ function Timerupdate()
     {
         btnResetTimer();
         playsoundRinging();
+        if(allSekundenT==0) return;//bricht gesamte Funktion ab(Timerupdate). Dieser Befehl muss genau hier stehen damit der Reset und das Klingeln erfolgt, aber kein weiteres Tick/Tack ausgeführt wird.
     }
-    if(parseInt(allStundenT)<10)
-    {
-        document.getElementById("TimerInputL").value = "0" + parseInt(allStundenT);
-    }
-    else
-    {
-        document.getElementById("TimerInputL").value = parseInt(allStundenT);
-    }
-    if(parseInt(allMinutenT)<10)
-    {
-        document.getElementById("TimerInputM").value = "0" + parseInt(allMinutenT);
-    }
-    else
-    {
-        document.getElementById("TimerInputM").value = parseInt(allMinutenT);
-    }
-    if(parseInt(allSekundenT)<10)
-    {
-        document.getElementById("TimerInputR").value = "0" + parseInt(allSekundenT);
-    }
-    else
-    {
-        document.getElementById("TimerInputR").value = parseInt(allSekundenT);
-    }
+    
+    document.getElementById("TimerInputL").value = String("0" + allStundenT).slice(-2);//  nur die letztenfügt immer eine 0 vorne an und zeigt zwei Ziffern. ".slice" funtioniert anscheinend nur bei Strings.
+    document.getElementById("TimerInputM").value = String("0" + allMinutenT).slice(-2);
+    document.getElementById("TimerInputR").value = String("0" + allSekundenT).slice(-2);
+
     if(isEven(allSekundenT))
     {
         playsoundTack();
